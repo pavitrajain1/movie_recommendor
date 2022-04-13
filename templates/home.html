@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<!-- GOOGLE FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu&display=swap" rel="stylesheet">
+
+<!-- FONT AWESOME -->
+<script src="https://kit.fontawesome.com/48c1c0ca2b.js" crossorigin="anonymous"></script>
+
+<style type="text/css">
+  h1 {
+  color: #f40552;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h3 {
+  color: #99b898;
+  font-family: 'Montserrat', monospace;
+}
+
+.rounded {
+  background-color: #c3edea;
+}
+
+.form-control {
+  width: 80%;
+  padding: 10px;
+  border-radius: 20px;
+  border: solid 1px;
+  border-color: #679b9b;
+  background-color: #e8e4e1;
+  display: inline-block;
+}
+
+.info {
+  width: 100px;
+  padding: 8px 10px;
+  border-radius: 20px;
+  border: none;
+  background: linear-gradient(120deg,#f40552,#ffcbcb);
+  position: relative;
+  right: 5%;
+  top: -2px;
+}
+
+.info:hover {
+  padding: 9px 11px;
+  background: linear-gradient(120deg, #ffcbcb, #f40552);
+}
+
+i {
+  color: #fff;
+}
+
+</style>
+
+  <div class="shadow p-3 mb-5 bg-white rounded">
+    <h1>🙏 Welcome 🙏</h1>
+    <h3>Your favourite Hollywood movie👇👇👇</h3>
+</div>
+
+
+    <form action="/recommend">
+      <input type="text" name="movie" class="form-control" placeholder="Movie name here">
+      <button type="submit" class="btn btn-info info"><i class="fas fa-caret-right fa-2x"> </i></button>
+    </form>
+{% endblock %}

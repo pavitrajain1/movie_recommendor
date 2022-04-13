@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Movie Recommendation</title>
+
+  <!-- FAVICON LINK -->
+  <link rel="icon" href="images/favicon.ico">
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu&display=swap" rel="stylesheet">
+
+  <!-- CSS only -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <!-- JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  <!-- CASCADING STYLE SHEET -->
+  <style type="text/css">
+body {
+  text-align: center;
+  margin: 0;
+}
+
+h1 {
+  color: #f40552;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  margin: 100px auto 50px auto;
+  font-size: 6rem;
+}
+
+h1:hover {
+  color: #ff287d;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+p {
+  font-family: 'Ubuntu', sans-serif;
+  margin-left: 20%;
+  width: 60%;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #7d5a5a;
+}
+
+.container-class {
+  background-color: #c3edea;
+}
+
+/* DIV CONTAINER */
+
+.container-div {
+  margin-bottom: 40px;
+}
+
+span {
+  font-size: 40px;
+}
+
+.container-ml {
+  display: inline-block;
+}
+
+</style>
+
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row container-class">
+      <div class="col-lg-12  container-div">
+	<nav>
+        <a href="{{url_for('home')}}"><h1>Choose Your Best!!!</h1></a>
+</nav>
+        <p>
+          <span>Y</span>ou may see your free time to go for a movie or take some time out. Some wants a theatre experience while others are okay with their laptop screens. But whatever it be, we all need recommendations for what to
+          watch next. <br>
+          <span>A</span>nd, you can always ask like minded friends for movie recommendation or search on sites like Quora, Reddit or use Google. With Internet data and
+          Machine Learning Algorithms, You can search for movie recommendation here 👇👇👇
+        </p>
+      </div>
+      <div class="col-md-6 container-ml">
+        <div >
+          {% block content %}
+          {% endblock %}
+        </div>
+      </div>
+       <div class="col-md-4 container-img">
+        <img src="https://www.pngrepo.com/download/120041/popcorn.png" alt="popcorn-image"  width=70% height=90% align="right">
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>

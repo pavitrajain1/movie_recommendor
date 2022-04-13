@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<style type="text/css">
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: #f40552;
+}
+h3 {
+  font-family: 'Ubuntu', sans-serif;
+  color: #7d5a5a;
+}
+
+li {
+  font-family: 'Ubuntu', sans-serif;
+  color: #99b898;
+}
+
+</style>
+
+<!-- GOOGLE FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu&display=swap" rel="stylesheet">
+
+
+
+  {% if t=='s' %}
+  <div class="shadow p-3 mb-5 bg-white rounded">
+    <h3>Sorry! This movie is not in our database.</h3>
+    <h3>Please check if you spelled it correct.</h3>
+    <h3>Or try with another movie.</h3>
+  </div>
+
+  {% else %}
+  <div class="shadow p-3 mb-5 bg-white rounded">
+    <h1>"{{movie}}" is a great choice.</h1>
+    <h3>Here are some more like this</h3>
+  </div>
+
+    <ul class="list-group list-group-flush">
+      {% for m in r %}
+        <li class="list-group-item "><strong>{{m|capitalize}}</strong></li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+{% endblock %}
